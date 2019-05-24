@@ -1,0 +1,226 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+
+    <groupId>com.domain.subdomain</groupId>
+    <artifactId>06-sprint-currency-route</artifactId>
+    <version>1.0-SNAPSHOT</version>
+
+
+<properties>
+      <!-- The main class to start by executing "java -jar" -->
+      <start-class>marc.MySimpleCamelApplication</start-class>
+</properties>
+<parent>
+        <groupId>org.springframework.boot</groupId>
+        <artifactId>spring-boot-starter-parent</artifactId>
+        <version>2.1.5.RELEASE</version>
+    </parent>
+    <dependencies>
+        <!-- https://mvnrepository.com/artifact/org.apache.camel/camel-core -->
+
+
+<dependency>
+    <groupId>org.fusesource</groupId>
+    <artifactId>camel-sap</artifactId>
+    <version>7.4.0.fuse-740015</version>
+</dependency>
+
+<dependency>
+    <groupId>org.springframework.boot</groupId>
+    <artifactId>spring-boot-starter-webflux</artifactId>
+    <version>2.1.5.RELEASE</version>
+</dependency>
+
+
+<dependency>
+    <groupId>org.springframework</groupId>
+    <artifactId>spring-context-support</artifactId>
+    <version>5.1.7.RELEASE</version>
+</dependency>
+
+<!-- https://mvnrepository.com/artifact/org.springframework.data/spring-data-jdbc -->
+<dependency>
+    <groupId>org.springframework.data</groupId>
+    <artifactId>spring-data-jdbc-core</artifactId>
+    <version>1.2.1.RELEASE</version>
+</dependency>
+
+<dependency>
+    <groupId>org.springframework</groupId>
+    <artifactId>spring-jdbc</artifactId>
+    <version>2.1.5.RELEASE</version>
+</dependency>
+
+        
+<dependency>
+    <groupId>org.springframework</groupId>
+    <artifactId>spring-jdbc</artifactId>
+    <version>3.2.0.RELEASE</version>
+</dependency>
+
+<dependency>
+    <groupId>org.springframework</groupId>
+    <artifactId>spring-websocket</artifactId>
+    <version>4.0.0.RELEASE</version>
+</dependency>
+
+
+<dependency>
+    <groupId>org.springframework.data</groupId>
+    <artifactId>spring-data-couchbase</artifactId>
+    <version>3.1.8.RELEASE</version>
+</dependency>
+
+<dependency>
+    <groupId>org.springframework.integration</groupId>
+    <artifactId>spring-integration-core</artifactId>
+    <version>5.1.5.RELEASE</version>
+</dependency>
+
+<dependency>
+      <groupId>org.springframework.data</groupId>
+      <artifactId>spring-data-releasetrain</artifactId>
+      <version>Lovelace-SR8</version>
+      <scope>import</scope>
+      <type>pom</type>
+    </dependency>
+
+
+ <dependency>
+        <groupId>org.springframework.boot</groupId>
+        <artifactId>spring-boot-starter-data-jpa</artifactId>
+    </dependency> 
+
+<dependency>
+	<groupId>org.hsqldb</groupId>
+	<artifactId>hsqldb</artifactId>
+	<scope>runtime</scope>
+</dependency>
+<!-- https://mvnrepository.com/artifact/org.springframework.data/spring-data-commons -->
+<dependency>
+    <groupId>org.springframework.data</groupId>
+    <artifactId>spring-data-commons</artifactId>
+    <version>2.1.5.RELEASE</version>
+</dependency>
+
+
+
+<dependency>
+		<groupId>org.springframework.boot</groupId>
+		<artifactId>spring-boot-starter-web</artifactId>
+	</dependency>
+<dependency>
+            <groupId>org.apache.camel</groupId>
+            <artifactId>camel-spring-boot-starter</artifactId>
+            <version>2.22.0</version>
+        </dependency>
+
+<!-- https://mvnrepository.com/artifact/org.apache.camel/camel-jackson -->
+<dependency>
+    <groupId>org.apache.camel</groupId>
+    <artifactId>camel-jackson</artifactId>
+    <version>2.22.0</version>
+    <scope>test</scope>
+</dependency>
+
+<dependency>
+    <groupId>org.quartz-scheduler</groupId>
+    <artifactId>quartz</artifactId>
+    <version>2.3.1</version>
+</dependency>
+
+
+<dependency>
+            <groupId>org.apache.camel</groupId>
+            <artifactId>camel-core</artifactId>
+            <version>2.22.0</version>
+        </dependency>
+
+        <!-- https://mvnrepository.com/artifact/org.apache.camel/camel-spring -->
+        <dependency>
+            <groupId>org.apache.camel</groupId>
+            <artifactId>camel-spring</artifactId>
+            <version>2.22.0</version>
+        </dependency>
+
+        <dependency>
+            <groupId>org.apache.camel</groupId>
+            <artifactId>spi-annotations</artifactId>
+            <version>2.22.0</version>
+        </dependency>
+
+        <!-- https://mvnrepository.com/artifact/org.apache.camel/camel-jms -->
+        <dependency>
+            <groupId>org.apache.camel</groupId>
+            <artifactId>camel-jms</artifactId>
+            <version>2.22.0</version>
+        </dependency>
+
+
+        <dependency>
+            <groupId>org.apache.camel</groupId>
+            <artifactId>camel-quartz</artifactId>
+            <version>2.22.0</version>
+        </dependency>
+
+  <dependency>
+    <groupId>org.apache.camel</groupId>
+    <artifactId>camel-servlet</artifactId>
+    <version>2.22.0</version>
+</dependency>
+        <!-- https://mvnrepository.com/artifact/org.apache.activemq/activemq-all -->
+<dependency>
+        <groupId>org.springframework.boot</groupId>
+        <artifactId>spring-boot-starter-web</artifactId>
+          <exclusions>
+        <exclusion>
+            <groupId>ch.qos.logback</groupId>
+            <artifactId>logback-classic</artifactId>
+        </exclusion>
+    </exclusions>
+    </dependency>
+
+<dependency>
+    <groupId>org.springframework</groupId>
+    <artifactId>spring-beans</artifactId>
+    <version>5.1.7.RELEASE</version>
+</dependency>
+
+</dependencies>
+
+    <build>
+        <plugins>
+            <!-- Allows the routes to be run via 'mvn camel:run' -->
+   <plugin>
+        <groupId>org.springframework.boot</groupId>
+        <artifactId>spring-boot-maven-plugin</artifactId>
+</plugin>         
+
+   <plugin>
+                <groupId>org.apache.camel</groupId>
+                <artifactId>camel-maven-plugin</artifactId>
+            </plugin>
+               <plugin>
+    <groupId>org.apache.maven.plugins</groupId>
+    <artifactId>maven-jar-plugin</artifactId>
+</plugin>
+<plugin>
+    <groupId>org.apache.felix</groupId>
+    <artifactId>maven-bundle-plugin</artifactId>
+    <extensions>true</extensions>
+    <configuration>
+        <instructions>
+            ...
+            <Import-Package>
+                org.apache.camel.component.servlet;version="[2.17,2)",  // package name here
+                *
+            </Import-Package>
+        </instructions>
+    </configuration>
+</plugin>
+        </plugins>
+    </build>
+</project>
